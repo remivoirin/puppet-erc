@@ -41,8 +41,7 @@ You might want to use systemd or supervisord to manage the process execution as 
 
 ## Usage
 
-**Insert an entry**
-Use Go regexp for host_regex.
+**Insert an entry**: use any Go regexp for host_regex.
 ```sh
 curl -X PUT -H 'Content-Type: application/json' -d '{ "host_regex": "test([0-9]+).domain.tld", "role": "testrole", "comment": "Test comment" }' http://yourhost:14002/insert
 ```
@@ -52,8 +51,7 @@ curl -X PUT -H 'Content-Type: application/json' -d '{ "host_regex": "test([0-9]+
 curl http://yourhost:14002/list | jq .
 ```
 
-**Get role for a host**
-Iterates on every hostname regexp, returns the role of the first matching regex, default otherwise. Iteration is made on a "latest inserted, first checked" basis.
+**Get role for a host**: iterates on every hostname regexp, returns the role of the first matching regex, default otherwise. Iteration is made on a "latest inserted, first checked" basis.
 * Fulltext (used by Puppet fact)
 ```sh
 curl http://yourhost:14002/role/fulltext/myhostname.mydomain.tld
@@ -76,12 +74,11 @@ Other methods for deletion will be available. For now, list entries and delete t
 * TODO: Rewrite the role fact in Ruby.
 
 ## Contact
-I am @lagsfr on the Puppet community channel.
-@LagWire on Twitter, and my email is remi _at_ lags.is.
+I am @lagsfr on the Puppet community channel, @LagWire on Twitter, and my email is remi _at_ lags.is.
 
 ## License
 MIT. See the LICENSE file for details.
 
 ## References and credits
-Using echo framework https://github.com/labstack/echo (MIT License)
-Using go-sqlite3 https://github.com/mattn/go-sqlite3 (MIT License)
+* Using echo framework https://github.com/labstack/echo (MIT License)
+* Using go-sqlite3 https://github.com/mattn/go-sqlite3 (MIT License)
