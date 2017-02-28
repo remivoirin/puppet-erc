@@ -4,8 +4,11 @@ RESTful API written in Go to manages roles in a Puppet role-profile pattern. ERC
 ## Why an External Role Classifier?
 
 Puppet has typically two sources of data: variables set in the Puppet code, and Hiera. Many organizations use a role-profile pattern to help managing node hierarchy and code inheritance, and there are lots of ways to implement it.
+
 A common problem is to define how Puppet agents get their role name, while the role content (included profiles or modules) is provided by the code or Hiera.
+
 This ERC allows you to add a "role" fact to your Puppet agents, so you can define roles contents using the "$role" variable (either inside a manifest, module or an additional Hiera datadir).
+
 The classifier works with entries in a DB, which you can manage with CRUD methods. An entry is made of three parts:
 * The hostname regexp, which represent all Puppet agent hostnames that will match the role.
 * The role.
