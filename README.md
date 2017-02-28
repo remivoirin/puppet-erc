@@ -63,7 +63,7 @@ curl http://yourhost:14002/role/fulltext/myhostname.mydomain.tld
 **Delete**
 * with an id
 ```sh
-curl -X DELETE http://yourhost:14002/delete/id/15
+curl -X DELETE http://yourhost:14002/id/15
 ```
 Other methods for deletion will be available. For now, list entries and delete the corresponding id.
 
