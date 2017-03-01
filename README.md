@@ -1,5 +1,5 @@
 # Puppet ERC
-RESTful API written in Go to manages roles in a Puppet role-profile pattern. ERC stands for "External Role Classifier".
+RESTful API written in Go to manage roles in a Puppet role-profile pattern. ERC stands for "External Role Classifier".
 
 ## Why an External Role Classifier?
 
