@@ -29,13 +29,20 @@ The classifier works with entries in a DB, which you can manage with CRUD method
 git clone https://github.com/remivoirin/puppet-erc.git && cd puppet-erc
 ```
 
-**Launch**
+**Launch...**
 * Using Go (requires the Echo framework)
 ```sh
 cd code
 go run *.go
 ```
 You might want to use systemd or supervisord to manage the process execution as the access log is written on the standard output.
+
+**... or install**
+* This is the preferred method as the binary is faster and portable.
+```sh
+go get https://github.com/remivoirin/puppet-erc/code
+```
+You can rename the resulting binary in $GOPATH/bin. You might want to use systemd or supervisord to manage the process execution as the access log is written on the standard output.
 
 ### Agents
 
@@ -68,7 +75,6 @@ curl -X DELETE http://yourhost:14002/id/15
 Other methods for deletion will be available. For now, list entries and delete the corresponding id.
 
 ## Known bugs and things to fix
-* TODO: Provide a binary/static version (Github release).
 * TODO: Make the "get hosts for a role" functions.
 * TODO: Delete every host regex matching a role (= delete a role).
 * TODO: Delete an entry matching an host regex.
